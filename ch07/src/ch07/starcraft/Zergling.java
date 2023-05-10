@@ -12,6 +12,10 @@ class Zergling {
 		this(1);
 	}
 	
+	public int getNum() {
+		return num;
+	}
+
 	Zergling(int num) {
 		this(num, 35, 5, 0, "발톱");
 	}
@@ -29,5 +33,45 @@ class Zergling {
 		System.out.println(String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
 				this.hp, this.atk, this.def, this.weapon));
 	}
-
+	
+	private int calcDamage(int atkDamage) {
+		return this.def - atkDamage;
+	}
+	
+	public void getAttacked(int atkDamage, int count) {
+		this.hp += calcDamage(atkDamage) * count;
+	}
+	
+	public int getHp() {
+		return hp;
+	}
+	
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+	
+	public int getAtk() {
+		return atk;
+	}
+	
+	public void setAtk(int atk) {
+		this.atk = atk;
+	}
+	
+	public int getDef() {
+		return def;
+	}
+	
+	public void setDef(int def) {
+		this.def = def;
+	}
+	
+	public String getWeapon() {
+		return weapon;
+	}
+	
+	public void setWeapon(String weapon) {
+		this.weapon = weapon;
+	}
+	
 }

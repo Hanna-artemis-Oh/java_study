@@ -24,6 +24,42 @@ class Marine {
 		this.weapon = weapon;
 	}
 	
+	public int getNum() {
+		return num;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
+	public int getAtk() {
+		return atk;
+	}
+
+	public void setAtk(int atk) {
+		this.atk = atk;
+	}
+
+	public int getDef() {
+		return def;
+	}
+
+	public void setDef(int def) {
+		this.def = def;
+	}
+
+	public String getWeapon() {
+		return weapon;
+	}
+	
+	public void setWeapon(String weapon) {
+		this.weapon = weapon;
+	}
+
 	public void reportStatus() {
 		System.out.println("마린#" + num + ":");
 		System.out.println(String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
@@ -31,7 +67,7 @@ class Marine {
 	}
 	
 	public void attack(Zergling z, int count) {
-		z.hp += (z.def - this.atk) * count;
+		z.getAttacked(this.atk, count);	
 	}
 
 }

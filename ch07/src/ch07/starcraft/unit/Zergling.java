@@ -1,6 +1,6 @@
-package ch07.starcraft;
+package ch07.starcraft.unit;
 
-class Zergling {
+public class Zergling {
 	
 	int num;
 	int hp;
@@ -11,12 +11,8 @@ class Zergling {
 	Zergling() {
 		this(1);
 	}
-	
-	public int getNum() {
-		return num;
-	}
 
-	Zergling(int num) {
+	public Zergling(int num) {
 		this(num, 35, 5, 0, "발톱");
 	}
 	
@@ -40,6 +36,10 @@ class Zergling {
 	
 	public void getAttacked(int atkDamage, int count) {
 		this.hp += calcDamage(atkDamage) * count;
+	}
+	
+	public int getNum() {
+		return num;
 	}
 	
 	public int getHp() {

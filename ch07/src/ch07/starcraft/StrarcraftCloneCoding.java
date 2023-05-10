@@ -1,5 +1,8 @@
 package ch07.starcraft;
 
+import ch07.starcraft.unit.Marine;
+import ch07.starcraft.unit.Zergling;
+
 public class StrarcraftCloneCoding {
 
 	public static void main(String[] args) {

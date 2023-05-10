@@ -1,6 +1,6 @@
-package ch07.starcraft;
+package ch07.starcraft.unit;
 
-class Marine {
+public class Marine {
 	
 	int num;
 	int hp;
@@ -12,7 +12,7 @@ class Marine {
 		this(1);
 	}
 	
-	Marine(int num) {
+	public Marine(int num) {
 		this(num, 40, 6, 0, "가우스 소총");
 	}
 	

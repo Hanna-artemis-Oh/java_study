@@ -33,6 +33,15 @@ public class Zergling extends Unit {
 				this.hp, atk, def, weapon));
 	}
 	
+	@Override
+	public String toString() {
+		String report = type + "#" + num + ":\n";
+		report += String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
+				this.hp, atk, def, weapon);
+		return report;
+	}
+	
+	
 	private int calcDamage(int atkDamage) {
 		return def - atkDamage;
 	}

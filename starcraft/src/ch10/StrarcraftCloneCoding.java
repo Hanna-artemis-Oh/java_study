@@ -36,9 +36,9 @@ public class StrarcraftCloneCoding {
 	}
 	
 	static void reportAllUnits() {
-		reportUnits(marines);
-		reportUnits(zerglings);
-		reportUnits(zealots);
+//		reportUnits(marines);
+//		reportUnits(zerglings);
+		System.out.println(zerglings[0]);
 	}
 	
 	static void reportUnits(Unit[] units) {

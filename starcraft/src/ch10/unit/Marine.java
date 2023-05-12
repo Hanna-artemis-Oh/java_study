@@ -38,16 +38,8 @@ public class Marine extends Unit {
 		return atkDamage - def;	
 	}
 	
-	public void attack(Marine z, int count) {
-		z.getAttacked(atk, count);	
-	}
-	
-	public void attack(Zergling z, int count) {
-		z.getAttacked(atk, count);	
-	}
-	
-	public void attack(Zealot z, int count) {
-		z.getAttacked(atk, count);	
+	public void attack(Unit u, int count) {
+		u.getAttacked(atk, count);	
 	}
 
 }

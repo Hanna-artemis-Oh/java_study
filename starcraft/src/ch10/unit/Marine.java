@@ -37,9 +37,9 @@ public class Marine extends Unit {
 	int calcDamage(int atkDamage) {
 		return atkDamage - def;	
 	}
-	
+
 	public void attack(Unit u, int count) {
 		u.getAttacked(atk, count);	
 	}
-
+	
 }

@@ -59,8 +59,8 @@ public class Zealot extends Unit {
 		return report;
 	}
 	
-	public void attack(Zergling z, int count) {
-		z.getAttacked(atk, count);	
+	public void attack(Unit u, int count) {
+		u.getAttacked(atk, count);	
 	}
 
 }

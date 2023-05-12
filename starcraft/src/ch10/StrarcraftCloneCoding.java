@@ -21,8 +21,28 @@ public class StrarcraftCloneCoding {
 		zerglings[0].reportStatus();
 		System.out.println();
 		
-		System.out.println("마린#2이 질럿#2을 11회 공격\n");
-		marines[1].attack(zealots[1], 11);		
+		System.out.println("마린#2이 질럿#2을 5회 공격\n");
+		marines[1].attack(zealots[1], 5);		
+		zealots[1].reportStatus();
+		System.out.println();
+		
+		System.out.println("저글링#1이 마린#3을 3회 공격\n");
+		zerglings[0].attack(marines[2], 3);		
+		marines[2].reportStatus();
+		System.out.println();
+		
+		System.out.println("저글링#1이 질럿#2을 7회 공격\n");
+		zerglings[0].attack(zealots[1], 7);		
+		zealots[1].reportStatus();
+		System.out.println();
+		
+		System.out.println("질럿#1이 마린#3을 3회 공격\n");
+		zealots[0].attack(marines[2], 3);		
+		marines[2].reportStatus();
+		System.out.println();
+		
+		System.out.println("질럿#1이 질럿#2을 3회 공격\n");
+		zealots[0].attack(zealots[1], 3);		
 		zealots[1].reportStatus();
 		System.out.println();
 

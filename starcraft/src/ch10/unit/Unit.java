@@ -1,6 +1,6 @@
 package ch10.unit;
 
-public class Unit {
+public abstract class Unit {
 	
 	int num;
 	int hp;	
@@ -9,6 +9,8 @@ public class Unit {
 		this.num = num;
 		this.hp = hp;
 	}
+	
+	abstract void attack(Unit u, int count);
 	
 	public void reportStatus() {
 		System.out.println(this);

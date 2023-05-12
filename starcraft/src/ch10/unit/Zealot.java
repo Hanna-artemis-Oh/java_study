@@ -4,16 +4,16 @@ public class Zealot extends Unit {
 	
 	static int atk;
 	static int def;
-	static String weapon;
-	static String type;
+	static String WEAPON;
+	static String TYPE;
 	
 	int shield;
 	
 	static {
 		atk = 8 * 2;
 		def = 1;
-		weapon = "사이오닉 검";
-		type = "질럿";
+		WEAPON = "사이오닉 검";
+		TYPE = "질럿";
 	}
 	
 	Zealot() {
@@ -53,9 +53,9 @@ public class Zealot extends Unit {
 	
 	@Override
 	public String toString() {
-		String report = type + "#" + num + ":\n";
+		String report = TYPE + "#" + num + ":\n";
 		report += String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s, 보호막: %s]\n", 
-				this.hp, atk, def, weapon, this.shield);
+				this.hp, atk, def, WEAPON, this.shield);
 		return report;
 	}
 	

@@ -4,14 +4,14 @@ public class Zergling extends Unit {
 	
 	static int atk;
 	static int def;
-	static String weapon;
-	static String type;
+	static final String WEAPON;
+	static final String TYPE;
 	
 	static {
 		atk = 5;
 		def = 0;
-		weapon = "발톱";
-		type = "저글링";
+		WEAPON = "발톱";
+		TYPE = "저글링";
 	}
 	
 	Zergling() {
@@ -28,9 +28,9 @@ public class Zergling extends Unit {
 	
 	@Override
 	public String toString() {
-		String report = type + "#" + num + ":\n";
+		String report = TYPE + "#" + num + ":\n";
 		report += String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
-				this.hp, atk, def, weapon);
+				this.hp, atk, def, WEAPON);
 		return report;
 	}
 	

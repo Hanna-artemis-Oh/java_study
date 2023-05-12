@@ -4,14 +4,14 @@ public class Marine extends Unit {
 	
 	static int atk;
 	static int def;
-	static String weapon;
-	static String type;
+	static final String WEAPON;
+	static final String TYPE;
 	
 	static {
 		atk = 6;
 		def = 0;
-		weapon = "가우스 소총";
-		type = "마린";
+		WEAPON = "가우스 소총";
+		TYPE = "마린";
 	}
 	
 	Marine() {
@@ -28,9 +28,9 @@ public class Marine extends Unit {
 	
 	@Override
 	public String toString() {
-		String report = type + "#" + num + ":\n";
+		String report = TYPE + "#" + num + ":\n";
 		report += String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
-				this.hp, atk, def, weapon);
+				this.hp, atk, def, WEAPON);
 		return report;
 	}
 	

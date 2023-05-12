@@ -27,13 +27,6 @@ public class Zergling extends Unit {
 	}
 	
 	@Override
-	public void reportStatus() {
-		System.out.println(type + "#" + num + ":");
-		System.out.println(String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
-				this.hp, atk, def, weapon));
-	}
-	
-	@Override
 	public String toString() {
 		String report = type + "#" + num + ":\n";
 		report += String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
@@ -41,14 +34,9 @@ public class Zergling extends Unit {
 		return report;
 	}
 	
-	
-	private int calcDamage(int atkDamage) {
-		return def - atkDamage;
+	@Override
+	int calcDamage(int atkDamage) {
+		return atkDamage - def;
 	}
-	
-	public void getAttacked(int atkDamage, int count) {
-		this.hp += calcDamage(atkDamage) * count;
-	}
-
-	
+		
 }

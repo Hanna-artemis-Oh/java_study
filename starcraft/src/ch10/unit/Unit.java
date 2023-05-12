@@ -11,9 +11,17 @@ public class Unit {
 	}
 	
 	public void reportStatus() {
-		
+		System.out.println(this);
 	}
-
+	
+	public void getAttacked(int atkDamage, int count) {
+		this.hp -= calcDamage(atkDamage) * count;
+	}
+	
+	int calcDamage(int atkDamage) {
+		//return def - atkDamage;
+		return 0;
+	}
 
 	public int getNum() {
 		return num;

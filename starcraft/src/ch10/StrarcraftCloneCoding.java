@@ -12,18 +12,23 @@ public class StrarcraftCloneCoding {
 	static Zealot[] zealots;
 
 	public static void main(String[] args) {
-		StrarcraftCloneCoding scc = new StrarcraftCloneCoding();
 		
-		scc.initUnits();
+		initUnits();
 		reportAllUnits();
 		
-		System.out.println("마린이 저글링을 2회 공격\n");
+		System.out.println("마린#1이 저글링#1을 2회 공격\n");
 		marines[0].attack(zerglings[0], 2);		
 		zerglings[0].reportStatus();
+		System.out.println();
+		
+		System.out.println("마린#2이 질럿#2을 11회 공격\n");
+		marines[1].attack(zealots[1], 11);		
+		zealots[1].reportStatus();
+		System.out.println();
 
 	}
 	
-	void initUnits() {
+	static void initUnits() {
 		marines = new Marine[] {
 			new Marine(1), new Marine(2), new Marine(3), new Marine(4), new Marine(5)	
 		};
@@ -36,9 +41,9 @@ public class StrarcraftCloneCoding {
 	}
 	
 	static void reportAllUnits() {
-//		reportUnits(marines);
-//		reportUnits(zerglings);
-		System.out.println(zerglings[0]);
+		reportUnits(marines);
+		reportUnits(zerglings);
+		reportUnits(zealots);
 	}
 	
 	static void reportUnits(Unit[] units) {

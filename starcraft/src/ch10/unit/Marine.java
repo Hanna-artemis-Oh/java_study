@@ -27,13 +27,26 @@ public class Marine extends Unit {
 	}
 	
 	@Override
-	public void reportStatus() {
-		System.out.println(type + "#" + num + ":");
-		System.out.println(String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
-				this.hp, atk, def, weapon));
+	public String toString() {
+		String report = type + "#" + num + ":\n";
+		report += String.format("  [생명력: %d, 공격력: %d, 방어력: %d, 무기이름: %s]\n", 
+				this.hp, atk, def, weapon);
+		return report;
+	}
+	
+	int calcDamage(int atkDamage) {
+		return atkDamage - def;	
+	}
+	
+	public void attack(Marine z, int count) {
+		z.getAttacked(atk, count);	
 	}
 	
 	public void attack(Zergling z, int count) {
+		z.getAttacked(atk, count);	
+	}
+	
+	public void attack(Zealot z, int count) {
 		z.getAttacked(atk, count);	
 	}
 

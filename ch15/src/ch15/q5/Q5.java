@@ -1,10 +1,10 @@
 package ch15.q5;
 
 class MyData {
-	int data;
+	long data;
 	
 	synchronized void modifyData() {
-		for (int i=0; i<10000; i++) {
+		for (long i=0; i<100_0000_0000L; i++) {
 			data++;
 		}
 		System.out.println(data);

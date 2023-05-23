@@ -38,7 +38,6 @@ public class Fruit implements Comparable<Fruit> {
 
 	@Override
 	public int compareTo(Fruit fruit) {
-		// TODO Auto-generated method stub
 		return this.weight - fruit.getWeight();
 	}
 	

@@ -47,7 +47,7 @@ public class FunctionalInterfaceCollectionEx {
 		
 		int number = 10;
 		
-		  
+//		al = new ArrayList<>();
         MyFunction myLambda = (n) ->
         {
   
@@ -55,17 +55,14 @@ public class FunctionalInterfaceCollectionEx {
             // num
             int value = number + n;
   
-            for (int a : al) {
-            	value += a;
-            }
-            
-            for (int i=0; i<al.size(); i++) {
-            	value += al.get(i);
-            }
-            
+
+            al.add(511);
+            System.out.println(al);
             
             return value;
         };
+        
+        myLambda.func(5);
 
 	}
 

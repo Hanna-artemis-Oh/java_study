@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
-public class GFGEx01 {
+public class GFGEx01_1 {
 
 	public static void main(String args[]) {
 		// Consumer to display a number
@@ -14,13 +14,8 @@ public class GFGEx01 {
 		// Implement display using accept()
 		display.accept(10);
 
-		//Consumer to multiply 2 to every integer of a list
-		Consumer<List<Integer>> modify = list -> {
-			for (int i = 0; i < list.size(); i++)
-				list.set(i, 2 * list.get(i));
-		};
 		AtomicInteger i = new AtomicInteger(0);
-		
+		Consumer<List<Integer>> modify = list -> list.stream().forEach(a -> list.set(i.getAndIncrement(), a*2));
 		Consumer<List<Integer>> dispList = list -> list.stream().forEach(a -> System.out.print(a + " "));
 		
 
